@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+
+<head>
+    <title> Home page</title>
+    <link rel="shortcut icon" href="./favicon1.ico" type="image/x-icon">
+    <link rel="icon" href="./favicon1.ico" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <script type="text/javascript" href="codes"></script>
+    <link type="text/css" rel="stylesheet" href="/Users/Nandhini/Desktop/ide-master/css/ide.css">
+</head>
+<body>
+    <body>
+        <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+            <a class="navbar-brand" href="https://dkmcollege.ac.in/b-sc-computer-science-ug/">
+            <img id ="logo" src="/Users/Nandhini/Desktop/ide-master/images/java.png"  width="100dp " height="100dp"> </a>
+            
+            
+            <ul class="navbar-nav">
+              <li class="nav-item">
+                <a class="nav-link" href="/Users/Nandhini/Desktop/ide-master/HOME.html">Home Page</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="/Users/Nandhini/Desktop/ide-master/index.html">Online IDE</a>
+              </li>
+            </ul>
+            <div class="dropdown">
+              <button class="dropbtn"> Sample Programs</button>
+              <div class="dropdown-content">
+                
+                 
+                  <a href="/Users/Nandhini/Desktop/ide-master/codes/c.html">C</a>
+                  <a href="/Users/Nandhini/Desktop/ide-master/codes/cpp.html">CPP</a>
+                  <a href="/Users/Nandhini/Desktop/ide-master/codes/python.html">PYTHON</a>
+                  <a href="/Users/Nandhini/Desktop/ide-master/codes/Java.html">JAVA</a>
+                </div>
+              </div>
+            </div>
+          </nav>    <h1 style="color: white;">PROGRAMS</h1>
+
+          <ol type="i" style="color: crimson;">
+
+            <li>
+              <a href="#fib">FIBONACCI SERIES</a>
+            </li>
+                <li>
+                  <a href="#pal">PALINDROME</a>
+                  </li>
+
+                <li><a href="#sum">SUM OF DIGITS</a></li>
+                  <li><a href="#am">AMSTRONG NUMBER</a></li>
+             
+                </ol>
+                <div id="fib">
+                  <h1 style=" background-color:black ; color:white; "> FIBONACCI SERIES
+                  </h1>
+                
+                <textarea id="fibs" rows="50px" cols="100px">
+                #include<stdio.h>    
+                int main()    
+                {    
+                 int n1=0,n2=1,n3,i,number;    
+                 printf("Enter the number of elements:");    
+                 scanf("%d",&number);    
+                 printf("\n%d %d",n1,n2);//printing 0 and 1    
+                 for(i=2;i<number;++i)//loop starts from 2 because 0 and 1 are already printed    
+                 {    
+                  n3=n1+n2;    
+                  printf(" %d",n3);    
+                  n1=n2;    
+                  n2=n3;    
+                 }  
+                  return 0;  
+                 }    
+                </textarea>
+                <button onclick="myFunctionseries()"><i class="fas fa-copy"></i>Copy text</button>
+                </div>
+                
+                <script>
+                    function myFunctionseries() {
+                      /* Get the text field */
+                      var copyText = document.getElementById("fibs");
+                    
+                      /* Select the text field */
+                      copyText.select();
+                      copyText.setSelectionRange(0, 99999); /* For mobile devices */
+                    
+                      /* Copy the text inside the text field */
+                      navigator.clipboard.writeText(copyText.value);
+                      
+                    }
+                    </script>
+                </div>
+                
+                
+                
+                <div id="pal">
+                  <h1 style=" background-color:black ; color:white; "> PALINDROME NUMBER
+                  </h1>
+                
+                <textarea id="pld" rows="50px" cols="100px">
+                
+                #include<stdio.h>  
+                int main()    
+                {    
+                int n,r,sum=0,temp;    
+                printf("enter the number=");    
+                scanf("%d",&n);    
+                temp=n;    
+                while(n>0)    
+                {    
+                r=n%10;    
+                sum=(sum*10)+r;    
+                n=n/10;    
+                }    
+                if(temp==sum)    
+                printf("palindrome number ");    
+                else    
+                printf("not palindrome");   
+                return 0;  
+                }   
+                </textarea>
+                <button onclick="myFunctionpal()"><i class="fas fa-copy"></i>Copy text</button>
+                </div>
+                
+                <script>
+                    function myFunctionpal() {
+                      /* Get the text field */
+                      var copyText = document.getElementById("pld");
+                    
+                      /* Select the text field */
+                      copyText.select();
+                      copyText.setSelectionRange(0, 99999); /* For mobile devices */
+                    
+                      /* Copy the text inside the text field */
+                      navigator.clipboard.writeText(copyText.value);
+                      
+                    }
+                    </script>
+                </div>
+                
+                <div id="sum">
+                  <h1 style=" background-color:black ; color:white; "> SUM OF DIGITS
+                
+                  </h1>
+                
+                <textarea id="sd" rows="50px" cols="100px">
+                
+                #include<stdio.h>  
+                 int main()    
+                {    
+                int n,sum=0,m;    
+                printf("Enter a number:");    
+                scanf("%d",&n);    
+                while(n>0)    
+                {    
+                m=n%10;    
+                sum=sum+m;    
+                n=n/10;    
+                }    
+                printf("Sum is=%d",sum);    
+                return 0;  
+                }   
+                
+                </textarea>
+                <button onclick="myFunctionsum()"><i class="fas fa-copy"></i>Copy text</button>
+                </div>
+                
+                <script>
+                    function myFunctionsum() {
+                      /* Get the text field */
+                      var copyText = document.getElementById("sd");
+                    
+                      /* Select the text field */
+                      copyText.select();
+                      copyText.setSelectionRange(0, 99999); /* For mobile devices */
+                    
+                      /* Copy the text inside the text field */
+                      navigator.clipboard.writeText(copyText.value);
+                      
+                    }
+                    </script>
+                </div>
+                
+                <div id="am">
+                  <h1 style=" background-color:black ; color:white; "> AMSTRONG NUMBER
+                  </h1>
+                
+                <textarea id="as" rows="50px" cols="100px">
+                
+                #include<stdio.h>  
+                 int main()    
+                {    
+                int n,r,sum=0,temp;    
+                printf("enter the number=");    
+                scanf("%d",&n);    
+                temp=n;    
+                while(n>0)    
+                {    
+                r=n%10;    
+                sum=sum+(r*r*r);    
+                n=n/10;    
+                }    
+                if(temp==sum)    
+                printf("armstrong  number ");    
+                else    
+                printf("not armstrong number");    
+                return 0;  
+                }   
+                </textarea>
+                <button onclick="myFunctionas()"><i class="fas fa-copy"></i>Copy text</button>
+                </div>
+                
+                <script>
+                    function myFunctionas() {
+                      /* Get the text field */
+                      var copyText = document.getElementById("as");
+                    
+                      /* Select the text field */
+                      copyText.select();
+                      copyText.setSelectionRange(0, 99999); /* For mobile devices */
+                    
+                      /* Copy the text inside the text field */
+                      navigator.clipboard.writeText(copyText.value);
+                      
+                    }
+                    </script>
+                </div>
+                
+                
+                <div id="site-footer" style="background-color: black; color: white; align-content: center;">
+      
+                  <p>© 2019-2022 <a href="https://dkmcollege.ac.in/b-sc-computer-science-ug/">CODING DESK</a></p>
+                  <span id="status-line"></span>
+              </div>
+              </body>
+            </html>

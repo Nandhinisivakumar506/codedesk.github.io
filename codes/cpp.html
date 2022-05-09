@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+
+<head>
+    <title> cpp programs</title>
+    <link rel="shortcut icon" href="./favicon1.ico" type="image/x-icon">
+    <link rel="icon" href="./favicon1.ico" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="shortcut icon" href="./favicon1.ico" type="image/x-icon">
+    <link rel="icon" href="./favicon1.ico" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <script type="text/javascript" src="/Users/Nandhini/Desktop/ide-master/js/copy.js"></script>
+    <link type="text/css" rel="stylesheet" href="/Users/Nandhini/Desktop/ide-master/css/ide.css">
+</head>
+<body>
+     
+    <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+        <a class="navbar-brand" href="https://dkmcollege.ac.in/b-sc-computer-science-ug/">
+        <img id ="logo" src="/Users/Nandhini/Desktop/ide-master/images/cpp.png"  width="100dp " height="100dp"> </a>
+        
+        
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link" href="/Users/Nandhini/Desktop/ide-master/HOME.html">Home Page</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/Users/Nandhini/Desktop/ide-master/index.html">Online IDE</a>
+          </li>
+          
+        </ul>
+        <div class="dropdown">
+          <button class="dropbtn"> Sample Programs</button>
+          <div class="dropdown-content">
+            
+             
+              <a href="/Users/Nandhini/Desktop/ide-master/codes/c.html">C</a>
+              <a href="/Users/Nandhini/Desktop/ide-master/codes/cpp.html">CPP</a>
+              <a href="/Users/Nandhini/Desktop/ide-master/codes/python.html">PYTHON</a>
+              <a href="/Users/Nandhini/Desktop/ide-master/codes/Java.html">JAVA</a>
+            </div>
+          </div>
+        </div>
+      </nav>
+<div id="program" style="background-color: black;">
+    <h1 style="color: white;">PROGRAMS</h1>
+    <ol type="i" style="color: crimson;">
+
+
+<li><a href="#overloading">OVERLOADING</a></li>
+<li><a href="#linearsearch">LINEAR SEARCH</a></li>
+<li><a href="#bubblesort">BUBBLE SORT</a></li>
+<li><a href="#traversal">TREE TRAVERSAL</a></li>
+</ol>
+</div>
+
+
+
+
+<div id="overloading">
+  <h1 style=" background-color:black ; color:white; "> Overload ++ when used as prefix
+  </h1>
+
+<textarea id="over" rows="50px" cols="100px">
+
+
+#include <iostream>
+using namespace std;
+
+class Count {
+   private:
+    int value;
+
+   public:
+
+    // Constructor to initialize count to 5
+    Count() : value(5) {}
+
+    // Overload ++ when used as prefix
+    void operator ++ () {
+        ++value;
+    }
+
+    void display() {
+        cout << "Count: " << value << endl;
+    }
+};
+
+int main() {
+    Count count1;
+
+    // Call the "void operator ++ ()" function
+    ++count1;
+
+    count1.display();
+    return 0;
+}
+
+</textarea>
+<button onclick="myFunctionover()"><i class="fas fa-copy"></i>Copy text</button>
+</div>
+
+<script>
+    function myFunctionover() {
+      /* Get the text field */
+      var copyText = document.getElementById("over");
+    
+      /* Select the text field */
+      copyText.select();
+      copyText.setSelectionRange(0, 99999); /* For mobile devices */
+    
+      /* Copy the text inside the text field */
+      navigator.clipboard.writeText(copyText.value);
+      
+    }
+    </script>
+</div>
+
+
+<div id="linearsearch">
+  <h1 style=" background-color:black ; color:white; "> LINEAR SEARCH
+  </h1>
+
+<textarea id="search" rows="50px" cols="100px">
+
+#include <iostream>
+using namespace std;
+int main() {
+   int sea, c, n=6;
+   int arr[] = { 12, 35, 69, 74, 165, 54};
+   sea=165;
+   for (c = 0; c < n; c++) {
+      if (arr[c] == sea) {
+         printf("%d is present at location %d.\n", search, c+1);
+         break;
+      }
+   }
+   if (c == n)
+      printf("%d isn't present in the array.\n", search);
+   return 0;
+}
+</textarea>
+<button onclick="myFunctionsearch()"><i class="fas fa-copy"></i>Copy text</button>
+</div>
+
+<script>
+    function myFunctionsearch() {
+      /* Get the text field */
+      var copyText = document.getElementById("search");
+    
+      /* Select the text field */
+      copyText.select();
+      copyText.setSelectionRange(0, 99999); /* For mobile devices */
+    
+      /* Copy the text inside the text field */
+      navigator.clipboard.writeText(copyText.value);
+      
+    }
+    </script>
+</div>
+
+
+<div id="bubblesort">
+  <h1 style=" background-color:black ; color:white; "> BUBBLE SORT
+  </h1>
+
+<textarea id="sort" rows="50px" cols="100px">
+#include <bits/stdc++.h>
+using namespace std;
+
+// A function to implement bubble sort
+void bubbleSort(int arr[], int n)
+{
+	int i, j;
+	for (i = 0; i < n - 1; i++)
+
+		// Last i elements are already in place
+		for (j = 0; j < n - i - 1; j++)
+			if (arr[j] > arr[j + 1])
+				swap(arr[j], arr[j + 1]);
+}
+
+/* Function to print an array */
+void printArray(int arr[], int size)
+{
+	int i;
+	for (i = 0; i < size; i++)
+		cout << arr[i] << " ";
+	cout << endl;
+}
+
+// Driver code
+int main()
+{
+	int arr[] = { 64, 34, 25, 12, 22, 11, 90 };
+	int n = sizeof(arr) / sizeof(arr[0]);
+	bubbleSort(arr, n);
+	cout << "Sorted array: \n";
+	printArray(arr, n);
+	return 0;
+}
+
+</textarea>
+<button onclick="myFunctionsort()"><i class="fas fa-copy"></i>Copy text</button>
+</div>
+
+
+
+<script>
+    function myFunctionsort() {
+      /* Get the text field */
+      var copyText = document.getElementById("sort");
+    
+      /* Select the text field */
+      copyText.select();
+      copyText.setSelectionRange(0, 99999); /* For mobile devices */
+    
+      /* Copy the text inside the text field */
+      navigator.clipboard.writeText(copyText.value);
+      
+    }
+    </script>
+</div>
+
+<div id="traversal">
+  <h1 style=" background-color:black ; color:white; "> TREE TRAVERSAL
+  </h1>
+
+<textarea id="tree" rows="50px" cols="100px">
+// C++ program for different tree traversals
+#include <iostream>
+using namespace std;
+
+/* A binary tree node has data, pointer to left child
+and a pointer to right child */
+struct Node {
+	int data;
+	struct Node *left, *right;
+};
+
+//Utility function to create a new tree node
+Node* newNode(int data)
+{
+	Node* temp = new Node;
+	temp->data = data;
+	temp->left = temp->right = NULL;
+	return temp;
+}
+
+/* Given a binary tree, print its nodes according to the
+"bottom-up" postorder traversal. */
+void printPostorder(struct Node* node)
+{
+	if (node == NULL)
+		return;
+
+	// first recur on left subtree
+	printPostorder(node->left);
+
+	// then recur on right subtree
+	printPostorder(node->right);
+
+	// now deal with the node
+	cout << node->data << " ";
+}
+
+/* Given a binary tree, print its nodes in inorder*/
+void printInorder(struct Node* node)
+{
+	if (node == NULL)
+		return;
+
+	/* first recur on left child */
+	printInorder(node->left);
+
+	/* then print the data of node */
+	cout << node->data << " ";
+
+	/* now recur on right child */
+	printInorder(node->right);
+}
+
+/* Given a binary tree, print its nodes in preorder*/
+void printPreorder(struct Node* node)
+{
+	if (node == NULL)
+		return;
+
+	/* first print data of node */
+	cout << node->data << " ";
+
+	/* then recur on left subtree */
+	printPreorder(node->left);
+
+	/* now recur on right subtree */
+	printPreorder(node->right);
+}
+
+/* Driver program to test above functions*/
+int main()
+{
+	struct Node* root = newNode(1);
+	root->left = newNode(2);
+	root->right = newNode(3);
+	root->left->left = newNode(4);
+	root->left->right = newNode(5);
+
+	cout << "\nPreorder traversal of binary tree is \n";
+	printPreorder(root);
+
+	cout << "\nInorder traversal of binary tree is \n";
+	printInorder(root);
+
+	cout << "\nPostorder traversal of binary tree is \n";
+	printPostorder(root);
+
+	return 0;
+}
+
+
+</textarea>
+<button onclick="myFunctiontree()"><i class="fas fa-copy"></i>Copy text</button>
+</div>
+
+<script>
+    function myFunctiontree() {
+      /* Get the text field */
+      var copyText = document.getElementById("tree");
+    
+      /* Select the text field */
+      copyText.select();
+      copyText.setSelectionRange(0, 99999); /* For mobile devices */
+    
+      /* Copy the text inside the text field */
+      navigator.clipboard.writeText(copyText.value);
+      
+    }
+    </script>
+</div>
+
+
+
+
+
+<div id="site-footer" style="background-color: black; color: white; align-content: center;">
+      
+  <p>© 2019-2022 <a href="https://dkmcollege.ac.in/b-sc-computer-science-ug/">CODING DESK</a></p>
+  <span id="status-line"></span>
+</div>
+
+</body>
+</html>
+
+   

@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+
+<head>
+    <title> Python programs</title>
+    <link rel="shortcut icon" href="./favicon1.ico" type="image/x-icon">
+    <link rel="icon" href="./favicon1.ico" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <script type="text/javascript" href="./copy.js"></script>
+   
+    <link rel="shortcut icon" href="./favicon1.ico" type="image/x-icon">
+    <link rel="icon" href="./favicon1.ico" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link type="text/css" rel="stylesheet" href="/Users/Nandhini/Desktop/ide-master/css/ide.css">
+</head>
+<body>
+    <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+        <a class="navbar-brand" href="https://dkmcollege.ac.in/b-sc-computer-science-ug/">
+        <img id ="logo" src="/Users/Nandhini/Desktop/ide-master/images/Python.png"  width="100dp " height="100dp"> </a>
+        
+        
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link" href="/Users/Nandhini/Desktop/ide-master/HOME.html">Home Page</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/Users/Nandhini/Desktop/ide-master/index.html">Online IDE</a>
+          </li>
+          
+        </ul>
+        <div class="dropdown">
+          <button class="dropbtn"> Sample Programs</button>
+          <div class="dropdown-content">
+            
+             
+              <a href="/Users/Nandhini/Desktop/ide-master/codes/c.html">C</a>
+              <a href="/Users/Nandhini/Desktop/ide-master/codes/cpp.html">CPP</a>
+              <a href="/Users/Nandhini/Desktop/ide-master/codes/python.html">PYTHON</a>
+              <a href="/Users/Nandhini/Desktop/ide-master/codes/Java.html">JAVA</a>
+            </div>
+          </div>
+        </div>
+      </nav>    <h1 style="color: white;">PROGRAMS</h1>
+    <ol type="i" style="color: white;">
+
+        <li><a href="#numpy">NUMPY</a></li>
+        <li><a href="#dictionary">DICTIONARY</a></li>
+        <li><a href="#histogram">HISTOGRAM</a></li>
+        <li><a href="#piechart">PIECHART</a></li>
+</ol>
+
+
+<div id="num">
+    <h1 style=" background-color:black ; color:white; ">NUMPY</h1>
+    <textarea id="numpy" rows="50px" cols="100px">
+ import numpy as np
+ 
+# Creating array object
+print("PROGRAM TO IMPLEMENT CONCEPT OF NUMPY")
+a = np.array( [[ 1, 2,3],
+                 [ 4, 5, 6]] )
+b=np.array( [[ 1, 1, 1],
+                 [ 2, 2, 2]] )
+c = np.zeros((2, 3))
+d=np.zeros((2,3))
+print("A MATRIX\n", a) 
+print("B MATRIX\n", b)
+c=a+b
+d=a-b
+
+
+print("ADDITION OF A AND B MATRIX\n",c)
+print("SUBTRACTION OF A AND B MATRIX\n", d)   
+print("Numpy other basic operations")
+print("No. of dimensions in A matrix: ", a.ndim)
+  
+# Printing shape of array
+print("Shape of A array : ", a.shape)
+  
+# Printing size (total number of elements) of array
+print("Size of A array: ", a.size)
+  
+# Printing type of elements in array
+print("Array stores elements of type in A Array: ", a.dtype)
+</textarea>
+<button onclick="myFunctionnum()"><i class="fas fa-copy"></i>Copy text</button>
+</div>
+
+<script>
+    function myFunctionnum() {
+      /* Get the text field */
+      var copyText = document.getElementById("numpy");
+    
+      /* Select the text field */
+      copyText.select();
+      copyText.setSelectionRange(0, 99999); /* For mobile devices */
+    
+      /* Copy the text inside the text field */
+      navigator.clipboard.writeText(copyText.value);
+      
+    }
+    </script>
+
+
+</div>
+
+<div id="dictionary">
+    <h1 style=" background-color:black ; color:white; ">DICTIONARY </h1>
+    <textarea id="dict" rows="50px" cols="100px">
+        internal1={"Regno": "30818U18026",
+            "Name":"Keerthika.G",
+            "Subject":"ASP.net",
+            "cam1":85,
+            "cam2":80,
+            "model":87,
+            "assign":5,
+            "int1":0}
+print ("Program to implment Dictionary")
+c1=internal1["cam1"]
+c2=internal1["cam2"]
+c3=internal1["model"]
+A=internal1["assign"]
+c4=((c1+c2+c3)-(min(c1,c2,c3)))/10+A
+print("RegNo:", internal1["Regno"])
+print("Name:", internal1["Name"])
+print("Cam1:", c1)
+print("cam2:", c2)
+print("Model:", c3)
+print("Assignment:", A)
+print("Internal is ", c4)
+
+
+        </textarea>
+        <button onclick="myFunctiondict()"><i class="fas fa-copy"></i>Copy text</button>
+</div>
+        <script>
+            function myFunctiondict() {
+              /* Get the text field */
+              var copyText = document.getElementById("dict");
+            
+              /* Select the text field */
+              copyText.select();
+              copyText.setSelectionRange(0, 99999); /* For mobile devices */
+            
+              /* Copy the text inside the text field */
+              navigator.clipboard.writeText(copyText.value);
+              
+            }
+            </script>
+
+        
+            </div>
+
+
+
+        <div id="histogram">
+            <h1 style=" background-color:black ; color:white; ">HISTOGRAM </h1>
+            <textarea id="hist" rows="50px" cols="100px">
+                HISTOGRAM
+import matplotlib.pyplot as plt
+population_age = [22,55,62,45,21,22,34,42,42,4,2,102,95,85,55,110,120,70,65,55,111,115,80,75,65,54,44,43,42,48]
+bins = [0,10,20,30,40,50,60,70,80,90,100]
+plt.hist(population_age, bins, histtype='bar', rwidth=0.8)
+plt.xlabel('age groups')
+plt.ylabel('Number of people')
+plt.title('Histogram')
+plt.show()
+            </textarea>
+            <button onclick="myFunction()"><i class="fas fa-copy"></i>Copy text</button>
+        </div>
+            
+                <script>
+                    function myFunction() {
+                      /* Get the text field */
+                      var copyText = document.getElementById("hist");
+                    
+                      /* Select the text field */
+                      copyText.select();
+                      copyText.setSelectionRange(0, 99999); /* For mobile devices */
+                    
+                      /* Copy the text inside the text field */
+                      navigator.clipboard.writeText(copyText.value);
+                      
+                    }
+                    </script>
+                    </div>
+
+
+
+            <div id="piechart">
+                <h1 style=" background-color:black ; color:white; "></style> PIE CHART</h1>
+                <textarea id="pie" rows="50px" cols="100px">
+
+
+PIE CHART
+import matplotlib.pyplot as plt
+ days = [1,2,3,4,5]
+sleeping =[7,8,6,11,7]
+eating = [2,3,4,3,2]
+working =[7,8,7,2,2]
+playing = [8,5,7,8,13]
+slices = [7,2,2,13]
+activities = ['sleeping','eating','working','playing']
+cols = ['c','m','r','b']
+ 
+plt.pie(slices,
+  labels=activities,
+  colors=cols,
+  startangle=90,
+  shadow= True,
+  explode=(0,0.1,0,0),
+  autopct='%1.1f%%')
+ 
+plt.title('Pie Plot')
+plt.show()
+</textarea>
+
+<button onclick="myFunctionpiechart()">Copy text</button>
+
+</div>
+<script>
+    function myFunctionpiechart() {
+      /* Get the text field */
+      var copyText = document.getElementById("pie");
+    
+      /* Select the text field */
+      copyText.select();
+      copyText.setSelectionRange(0, 99999); /* For mobile devices */
+    
+      /* Copy the text inside the text field */
+      navigator.clipboard.writeText(copyText.value);
+      
+    }
+    </script>
+    </div>
+    <div id="site-footer" style="background-color: black; color: white; align-content: center;">
+      
+      <p>© 2019-2022 <a href="https://dkmcollege.ac.in/b-sc-computer-science-ug/">CODING DESK</a></p>
+      <span id="status-line"></span>
+  </div>
+
+</body>
+</html>
+
